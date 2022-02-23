@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Drawing.Text;
-using System.Windows.Forms;
 
-namespace BaseGridPanel
+namespace BevelControl
 {
 	/// <summary>
 	///     определить открытый делегат button_Click

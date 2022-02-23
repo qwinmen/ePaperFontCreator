@@ -1,4 +1,4 @@
-namespace BaseGridPanel
+namespace BevelControl
 {
 	/// <summary>
 	///     Угол, в котором рисовать пункты линейки

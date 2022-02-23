@@ -1,4 +1,4 @@
-namespace BaseGridPanel
+namespace BevelControl
 {
 	partial class BevelControl
 	{
@@ -28,19 +28,18 @@ namespace BaseGridPanel
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.SuspendLayout();
+			components = new System.ComponentModel.Container();
 			// 
-			// BevelControl
+			// Bevel
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Name = "BevelControl";
+			this.Name = "Bevel";
 			this.Click += new System.EventHandler(this.button1_Click);
 			this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Bevel_MouseMove);
 			this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bevel_MouseDown);
 			this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Bevel_MouseUp);
 			this.ResumeLayout(false);
-
 		}
 
 		#endregion
