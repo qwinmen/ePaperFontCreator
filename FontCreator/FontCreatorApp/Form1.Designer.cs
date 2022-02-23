@@ -33,6 +33,7 @@
             // 
             // bevelControlPanel
             // 
+            this.bevelControlPanel.AutoScroll = true;
             this.bevelControlPanel.BevelLineStep = 20;
             this.bevelControlPanel.BKarandash = '1';
             this.bevelControlPanel.BSterka = '0';
@@ -45,6 +46,10 @@
             this.bevelControlPanel.Rejim = false;
             this.bevelControlPanel.Size = new System.Drawing.Size(573, 393);
             this.bevelControlPanel.TabIndex = 0;
+            this.bevelControlPanel.CliclEvent += new BevelControl.ClickEventHandler(this.bevelControlPanel_CliclEvent);
+            this.bevelControlPanel.MouseDownEvent += new BevelControl.MouseDwnEventHandler(this.bevelControlPanel_MouseDownEvent);
+            this.bevelControlPanel.MouseMoveEvent += new BevelControl.MouseMovEventHandler(this.bevelControlPanel_MouseMoveEvent);
+            this.bevelControlPanel.MouseUpEvent += new BevelControl.MouseUpEventHandler(this.bevelControlPanel_MouseUpEvent);
             // 
             // Form1
             // 
