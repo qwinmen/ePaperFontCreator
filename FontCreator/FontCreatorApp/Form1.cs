@@ -23,6 +23,9 @@ namespace FontCreatorApp
 
 		private void bevelControlPanel_MouseUpEvent(object sender, MouseEventArgs e)
 		{
+			int[,] paintData = this.bevelControlPanel.SaveArrayToFile(out int xLenght, out int yLenght);
+			string text = _paintGainLogic.Build(paintData, xLenght, yLenght);
+			textBoxHex.Text = text;
 		}
 
 		private void Form1_Load(object sender, EventArgs e)

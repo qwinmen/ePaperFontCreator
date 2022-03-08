@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace FontCreatorApp;
 
 public class PaintGain
@@ -57,5 +59,62 @@ public class PaintGain
 				BevelLineStep = 20;
 				break;
 		}
+	}
+
+	public string Build(int[,] arrayData, int xLenght, int yLenght)
+	{
+		/*
+		 * получаем массив с поля
+		 * переводим значение массива в Hex формат
+		 * отдаем результат
+		 */
+		string result = "";
+		List<int> stringValue = new List<int>(xLenght);
+		for (int y = 0; y < yLenght; y++)
+		{
+			for (int i = 0; i < xLenght; i++)
+			{
+				stringValue.Add(arrayData[i, y]);
+			}
+
+			result += TransformToHex(stringValue) + Environment.NewLine;
+			stringValue.Clear();
+		}
+
+		return result;
+	}
+
+	private string TransformToHex(List<int> stringValue)
+	{
+		/*
+		 * разбить на части по 8
+		 * каждую часть приводить к Hex
+		 */
+		string result = "";
+		int counter = 0;
+		string tmpByte = "";
+		const int bitConst = 7; //колличество разрядов начиная с 0
+
+		foreach (int i in stringValue)
+		{
+			tmpByte += i;
+			if (counter == bitConst)
+			{
+				result += String.Format("0x{0:X2}, ", Convert.ToUInt64(tmpByte, 2));
+				counter = 0;
+				tmpByte = String.Empty;
+			}
+			else
+				counter++;
+		}
+
+		if (counter != 0)
+		{
+			result += String.Format("0x{0:X2}, ", Convert.ToUInt64(
+				tmpByte.PadRight(bitConst + 1, '0')
+				, 2));
+		}
+
+		return result;
 	}
 }
