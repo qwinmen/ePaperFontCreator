@@ -6,7 +6,12 @@
     <Nullable>disable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>font-icon-35269-Windows.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="font-icon-35269-Windows.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\CustomGridPanel\BevelControl\BevelControl.csproj" />
